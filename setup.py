@@ -37,8 +37,7 @@ for x, y, duration in actions:
             pag.rightClick(x, y, duration=duration)
         elif (x, y, duration) == (610, 531, 2):
             pag.click(x, y, duration=duration)
-            cmd = r'"C:\Program Files (x86)\LiteManager Pro - Server\ROMServer.exe" /start'
-subprocess.run(cmd, shell=True)
+            cmd = r'"C:\Program Files (x86)\LiteManager Pro - Server\ROMServer.exe" /start'subprocess.run(cmd, shell=True)
         else:
             pag.click(x, y, duration=duration)
 
