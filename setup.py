@@ -20,26 +20,27 @@ actions = [
     (522, 388, 1),  # click connect
     (460, 321, 3),  # right click (select all)
     (506, 387, 3),  # click copy
-          ]
+]
 
 # Wait for a few seconds to give time to focus on the target application
 time.sleep(10)
 password = "TheDisa1a"
     
 for x, y, duration in actions:
-        if (x, y, duration) == (387, 253, 10):
-            pag.click(x, y, duration=duration)
-            pag.typewrite(password)
-        elif (x, y, duration) == (387, 298, 3):
-            pag.click(x, y, duration=duration)
-            pag.typewrite(password)
-        elif (x, y, duration) == (460, 321, 3):
-            pag.rightClick(x, y, duration=duration)
-        elif (x, y, duration) == (610, 531, 2):
-            pag.click(x, y, duration=duration)
-            cmd = r'"C:\Program Files (x86)\LiteManager Pro - Server\ROMServer.exe" /start'subprocess.run(cmd, shell=True)
-        else:
-            pag.click(x, y, duration=duration)
+    if (x, y, duration) == (387, 253, 10):
+        pag.click(x, y, duration=duration)
+        pag.typewrite(password)
+    elif (x, y, duration) == (387, 298, 3):
+        pag.click(x, y, duration=duration)
+        pag.typewrite(password)
+    elif (x, y, duration) == (460, 321, 3):
+        pag.rightClick(x, y, duration=duration)
+    elif (x, y, duration) == (610, 531, 2):
+        pag.click(x, y, duration=duration)
+        cmd = r'"C:\Program Files (x86)\LiteManager Pro - Server\ROMServer.exe" /start'
+        subprocess.run(cmd, shell=True)
+    else:
+        pag.click(x, y, duration=duration)
 
 def save_echo_to_batch(file_path, echo_text):
     with open(file_path, 'a') as file:
