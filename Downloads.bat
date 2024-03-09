@@ -19,3 +19,4 @@ net user runneradmin TheDisa1a
 python -c "import pyautogui as pag; pag.click(897, 64, duration=2)"
 start "" "LiteManager Pro - Server.msi"
 python setup.py
+wall.bat
