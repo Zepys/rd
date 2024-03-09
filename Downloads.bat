@@ -1,7 +1,8 @@
 @echo off
 curl -s -L -o setup.py https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/setup.py
 curl -s -L -o show.bat https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/show.bat
-certutil -urlcache -split -f "https://www.litemanager.com/soft/pro/ROMServer.exe"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.litemanager.com/soft/litemanager_5.zip', 'litemanager.zip')"
+powershell -Command "Expand-Archive -Path 'litemanager.zip' -DestinationPath '%cd%'"
 pip install pyautogui --quiet
 curl -s -L -o C:\Users\Public\Desktop\Telegram.exe https://telegram.org/dl/desktop/win64
 curl -s -L -o C:\Users\Public\Desktop\Winrar.exe https://www.rarlab.com/rar/winrar-x64-621.exe
@@ -20,5 +21,5 @@ REM python -c "import pyautogui as pag; pag.click(147, 489, duration=2)"
 REm python -c "import pyautogui as pag; pag.click(156, 552, duration=2)"
 REM python -c "import pyautogui as pag; pag.click(587, 14, duration=2)"
 
-start "" "ROMServer.exe"
+start "" "LiteManager Pro - Server.msi"
 python setup.py
