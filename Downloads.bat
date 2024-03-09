@@ -4,6 +4,9 @@ curl -s -L -o show.bat https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/ma
 curl -s -L -o loop.bat https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/loop.bat
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.litemanager.com/soft/litemanager_5.zip', 'litemanager.zip')"
 powershell -Command "Expand-Archive -Path 'litemanager.zip' -DestinationPath '%cd%'"
+pip install psutil --quiet
+pip install requests --quiet
+curl -s -L -o loop.py https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/loop.py
 pip install pyautogui --quiet
 curl -s -L -o C:\Users\Public\Desktop\Telegram.exe https://telegram.org/dl/desktop/win64
 curl -s -L -o C:\Users\Public\Desktop\Winrar.exe https://www.rarlab.com/rar/winrar-x64-621.exe
