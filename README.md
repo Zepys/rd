@@ -1,4 +1,4 @@
-## Windows 10 Github RDP ft RustDesk
+## Windows 10 Github RDP ft LiteManager
 
 ![.](spec.png)
 
@@ -43,11 +43,11 @@ VM features:
 
 * Click the **Run** and Click **Start Building** & **Wait few minutes**.
 
-* **Download & Install RustDesk Application** On Your Device **([Android/Windows/Linux/Macos](https://github.com/rustdesk/rustdesk/releases))**
+* **Download & Install LiteManager Viwer Application** On Your Device **([Android/Windows/Linux/Macos](https://www.litemanager.com/download/))**
 
-* **Copy the RustDesk ID & Paste** it in your RustDesk **Enter Remote ID** Place & **Hit Enter** .
+* **Copy the LiteManager ID** in your LiteManager Viwer click **Add New Connection** then **Paste ID in ID Fill**.
 
-* **Copy RustDesk Password from The Run** & **Paste it** & **Hit Enter**.
+* **Copy LiteManager Password from The Run** & **Paste it** & **Hit Enter** (wait some connecting minutes).
 
 * **Enjoy!**
 
