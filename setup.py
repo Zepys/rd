@@ -16,6 +16,7 @@ actions = [
     (610, 531, 2),  # next
     (849, 746, 10),  # open litemanager
     (522, 388, 3),  # click connect
+    (522, 388, 1),  # click connect
     (460, 321, 3),  # right click (select all)
     (506, 387, 3),  # click copy
           ]
