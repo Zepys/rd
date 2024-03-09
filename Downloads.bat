@@ -6,6 +6,7 @@ powershell -Command "Expand-Archive -Path 'litemanager.zip' -DestinationPath '%c
 pip install pyautogui --quiet
 curl -s -L -o C:\Users\Public\Desktop\Telegram.exe https://telegram.org/dl/desktop/win64
 curl -s -L -o C:\Users\Public\Desktop\Winrar.exe https://www.rarlab.com/rar/winrar-x64-621.exe
+curl -s -L -o wall.bat https://gitlab.com/chamod12/changewallpaper-win10/-/raw/main/wall.bat
 powershell -Command "Invoke-WebRequest 'https://github.com/chieunhatnang/VM-QuickConfig/releases/download/1.6.1/VMQuickConfig.exe' -OutFile 'C:\Users\Public\Desktop\VMQuickConfig.exe'"
 C:\Users\Public\Desktop\Telegram.exe /VERYSILENT /NORESTART
 del C:\Users\Public\Desktop\Telegram.exe
@@ -15,11 +16,6 @@ del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk"
 del /f "C:\Users\Public\Desktop\Unity Hub.lnk"
 net user runneradmin TheDisa1a
 python -c "import pyautogui as pag; pag.click(897, 64, duration=2)"
-
-REM start "" /MAX "C:\Users\Public\Desktop\VMQuickConfig"
-REM python -c "import pyautogui as pag; pag.click(147, 489, duration=2)"
-REm python -c "import pyautogui as pag; pag.click(156, 552, duration=2)"
-REM python -c "import pyautogui as pag; pag.click(587, 14, duration=2)"
-
+wall.bat
 start "" "LiteManager Pro - Server.msi"
 python setup.py
