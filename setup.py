@@ -1,6 +1,7 @@
 import pyautogui as pag
 import time
 import pyperclip
+import subprocess
 
 # Define the coordinates and use the `actions` list
 actions = [
@@ -13,7 +14,7 @@ actions = [
     (387, 253, 10),  # type pass
     (387, 298, 3),  # type pass
     (564, 598, 3),  # ok
-    (610, 531, 2),  # next
+    (610, 531, 2),  # finish
     (849, 746, 10),  # open litemanager
     (522, 388, 3),  # click connect
     (522, 388, 1),  # click connect
@@ -34,6 +35,10 @@ for x, y, duration in actions:
             pag.typewrite(password)
         elif (x, y, duration) == (460, 321, 3):
             pag.rightClick(x, y, duration=duration)
+        elif (x, y, duration) == (610, 531, 2):
+            pag.click(x, y, duration=duration)
+            cmd = r'"C:\Program Files (x86)\LiteManager Pro - Server\ROMServer.exe" /start'
+subprocess.run(cmd, shell=True)
         else:
             pag.click(x, y, duration=duration)
 
