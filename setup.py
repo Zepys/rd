@@ -39,7 +39,7 @@ for x, y, duration in actions:
 
 def save_echo_to_batch(file_path, echo_text):
     with open(file_path, 'a') as file:
-        file.write(f'\necho {echo_text}\n')
+        file.write(f'\necho {echo_text}')
 
 def save_command():
     clipboard_text = pyperclip.paste()
