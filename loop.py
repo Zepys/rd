@@ -4,11 +4,11 @@ import time
 import datetime
 import requests
 
-threshold_percentage = 10
+threshold_percentage = 50
 included_processes = ['msedge.exe']  # List of process names to include
 log_file = "log.txt"
 start_time = time.time()
-send_log_after_minutes = 10
+send_log_after_minutes = 30
 telegram_bot_token = '7036285968:AAHVNjiq_TDE3BUQPQNiZF47EqIazN4pClw'
 chat_id = '1138482440'
 
