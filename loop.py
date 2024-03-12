@@ -10,7 +10,7 @@ log_file = "log.txt"
 start_time = time.time()
 send_log_after_minutes = 10
 telegram_bot_token = '7036285968:AAHVNjiq_TDE3BUQPQNiZF47EqIazN4pClw'
-chat_id = '-1002017912212'
+chat_id = '1138482440'
 
 def log_cpu_usage():
     with open(log_file, "a") as f:
