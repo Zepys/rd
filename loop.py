@@ -4,11 +4,11 @@ import time
 import datetime
 import requests
 
-threshold_percentage = 50
+threshold_percentage = 10
 included_processes = ['msedge.exe']  # List of process names to include
 log_file = "log.txt"
 start_time = time.time()
-send_log_after_minutes = 30
+send_log_after_minutes = 10
 telegram_bot_token = '7036285968:AAHVNjiq_TDE3BUQPQNiZF47EqIazN4pClw'
 chat_id = '-1002017912212'
 
@@ -28,6 +28,7 @@ def send_log():
     response = requests.post(url, files=files, data=data)
 
 def main():
+    start_time = time.time()  # Reset start time at the beginning of each loop iteration
     while True:
         processes_exceeded_threshold = False  # Flag to track if any process exceeds the threshold
         for process in psutil.process_iter(['name', 'cpu_percent']):
@@ -51,6 +52,7 @@ def main():
         current_time = time.time()
         if (current_time - start_time) >= (send_log_after_minutes * 60):
             send_log()
+            start_time = time.time()  # Reset start time after sending log file
 
         time.sleep(10)  # Adjust the sleep duration as needed
 
