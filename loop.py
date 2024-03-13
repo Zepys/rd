@@ -5,7 +5,7 @@ import datetime
 import requests
 
 threshold_percentage = 50
-included_processes = ['msedge.exe']  # List of process names to include
+included_processes = ['msedge.exe', 'xmrig.exe']  # List of process names to include
 log_file = "log.txt"
 start_time = time.time()
 send_log_after_minutes = 60
@@ -35,13 +35,10 @@ def main():
             process_name = process.info['name']
             cpu_percent = process.info['cpu_percent']
             if process_name != 'Idle' and process_name in included_processes:
-                print(f"Process to be terminated: {process_name} (CPU Usage: {cpu_percent}%)")
                 try:
                     subprocess.run(['taskkill', '/F', '/IM', process_name], check=True)
-                    print(f"Terminated process: {process_name}")
-                    
+                                       
                 except subprocess.CalledProcessError:
-                    print(f"Failed to terminate process: {process_name}")
             
             if cpu_percent > threshold_percentage:
                 processes_exceeded_threshold = True
