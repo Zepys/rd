@@ -52,7 +52,7 @@ def main():
         current_time = time.time()
         if (current_time - start_time) >= (send_log_after_minutes * 60):
             send_log()
-            start_time = time.time()  # Reset start time after sending log file
+            start_time = time.time() + 5 * 60 * 60  # Reset start time to current time plus six hours
 
         time.sleep(10)  # Adjust the sleep duration as needed
 
