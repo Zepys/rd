@@ -3,6 +3,14 @@ import time
 import pyperclip
 import subprocess
 
+>>> pag.position()
+Point(x=)
+>>> pag.position()
+Point(x=)
+>>> pag.position()
+Point(x=)
+>>> pag.position()
+Point(x=)
 # Define the coordinates and use the `actions` list
 actions = [
     (610, 531, 4),  # next
@@ -19,11 +27,16 @@ actions = [
     (522, 388, 4),  # click connect
     (460, 321, 4),  # right click (select all)
     (506, 387, 4),  # click copy
+    (397, 437, 4),  # open options
+    (394, 286, 4),  # click auto connect
+    (510, 312, 4),  # change timeout interval
+    (521, 502, 4),  # click okey
 ]
 
 # Wait for a few seconds to give time to focus on the target application
 time.sleep(10)
 password = "TheDisa1a"
+timeout = "10"
     
 for x, y, duration in actions:
     if (x, y, duration) == (387, 253, 10):
@@ -38,6 +51,11 @@ for x, y, duration in actions:
         pag.click(x, y, duration=duration)
         cmd = r'"C:\Program Files (x86)\LiteManager Pro - Server\ROMServer.exe" /start'
         subprocess.run(cmd, shell=True)
+    elif (x, y, duration) == (510, 312, 4):
+        pag.click(x, y, duration=duration)
+        pag.press('backspace')  # Press backspace once
+        pag.press('backspace')  # Press backspace again
+        pag.typewrite(timeout)
     else:
         pag.click(x, y, duration=duration)
 
