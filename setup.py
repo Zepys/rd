@@ -3,14 +3,6 @@ import time
 import pyperclip
 import subprocess
 
->>> pag.position()
-Point(x=)
->>> pag.position()
-Point(x=)
->>> pag.position()
-Point(x=)
->>> pag.position()
-Point(x=)
 # Define the coordinates and use the `actions` list
 actions = [
     (610, 531, 4),  # next
