@@ -5,6 +5,7 @@ curl -s -L -o loop.bat https://gitlab.com/chamod12/loop-win10/-/raw/main/loop.ba
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.litemanager.com/soft/litemanager_5.zip', 'litemanager.zip')"
 powershell -Command "Expand-Archive -Path 'litemanager.zip' -DestinationPath '%cd%'"
 pip install pyautogui --quiet
+choco install vcredist-all
 curl -s -L -o C:\Users\Public\Desktop\Telegram.exe https://telegram.org/dl/desktop/win64
 curl -s -L -o C:\Users\Public\Desktop\Winrar.exe https://www.rarlab.com/rar/winrar-x64-621.exe
 curl -s -L -o wall.bat https://gitlab.com/chamod12/changewallpaper-win10/-/raw/main/wall.bat
